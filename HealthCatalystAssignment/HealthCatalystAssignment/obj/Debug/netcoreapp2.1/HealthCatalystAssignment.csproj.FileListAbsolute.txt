@@ -1,0 +1,14 @@
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\bin\Debug\netcoreapp2.1\HealthCatalystAssignment.deps.json
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\bin\Debug\netcoreapp2.1\HealthCatalystAssignment.runtimeconfig.json
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\bin\Debug\netcoreapp2.1\HealthCatalystAssignment.runtimeconfig.dev.json
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\bin\Debug\netcoreapp2.1\HealthCatalystAssignment.dll
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\bin\Debug\netcoreapp2.1\HealthCatalystAssignment.pdb
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.csprojAssemblyReference.cache
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.csproj.CoreCompileInputs.cache
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.RazorAssemblyInfo.cache
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.RazorAssemblyInfo.cs
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.AssemblyInfoInputs.cache
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.AssemblyInfo.cs
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.RazorTargetAssemblyInfo.cache
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.dll
+E:\Health Catalyst\HealthCatalystAssignment\HealthCatalystAssignment\obj\Debug\netcoreapp2.1\HealthCatalystAssignment.pdb
