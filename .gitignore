@@ -1,1 +1,6 @@
 wwwroot
+/HealthCatalystAssignment/HealthCatalystProject/bin
+/HealthCatalystAssignment/HealthCatalystProject/obj
+/HealthCatalystAssignment/packages
+/HealthCatalystAssignment/HealthCatalystProject/Angular/dist
+node_modules
