@@ -13,17 +13,4 @@ export default class UserService {
     search(searchString: string): Observable<Array<User>> {
         return this.http.get<Array<User>>(`${this.USERS_API}/${searchString}`);
     }
-
-    save(user: User): Observable<User> {
-        let result: Observable<User>;
-        if (user.id) {
-            result = this.http.put<User>(
-                `${this.USERS_API}/${user.id}`,
-                user
-            );
-        } else {
-            result = this.http.post<User>(this.USERS_API, user);
-        }
-        return result;
-    }
 }

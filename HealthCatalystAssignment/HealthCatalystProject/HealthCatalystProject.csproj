@@ -221,8 +221,6 @@
     <Content Include="Angular\e2e\protractor.conf.js" />
     <Content Include="Angular\src\app\app.component.css" />
     <Content Include="Angular\src\app\app.component.html" />
-    <Content Include="Angular\src\app\search-box\search-box.component.css" />
-    <Content Include="Angular\src\app\search-box\search-box.component.html" />
     <Content Include="Angular\src\app\users-list\users-list.component.css" />
     <Content Include="Angular\src\app\users-list\users-list.component.html" />
     <Content Include="Angular\src\assets\css\material-kit.css" />
@@ -561,8 +559,6 @@
     <TypeScriptCompile Include="Angular\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="Angular\src\app\app.component.ts" />
     <TypeScriptCompile Include="Angular\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Angular\src\app\search-box\search-box.component.spec.ts" />
-    <TypeScriptCompile Include="Angular\src\app\search-box\search-box.component.ts" />
     <TypeScriptCompile Include="Angular\src\app\shared\API\user.service.ts" />
     <TypeScriptCompile Include="Angular\src\app\shared\ViewModels\User.ts" />
     <TypeScriptCompile Include="Angular\src\app\users-list\users-list.component.spec.ts" />

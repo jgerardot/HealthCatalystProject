@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "#main-raised.wait, #main-raised.wait * {\r\n  cursor: wait !important;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNtYWluLXJhaXNlZC53YWl0LCAjbWFpbi1yYWlzZWQud2FpdCAqIHtcclxuICBjdXJzb3I6IHdhaXQgIWltcG9ydGFudDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg\" color-on-scroll=\"100\">\r\n  <div class=\"container\">\r\n    <!--<div class=\"navbar-translate\">\r\n      <a class=\"navbar-brand\" href=\"https://demos.creative-tim.com/material-kit/index.html\">\r\n        Material Kit\r\n      </a>\r\n\r\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n    </div>-->\r\n\r\n    <!--<div class=\"collapse navbar-collapse\">\r\n      <ul class=\"navbar-nav ml-auto\">\r\n        <li class=\"nav-item\">\r\n          <a href=\"#\" class=\"nav-link\">\r\n            <i class=\"material-icons\">apps</i> Template\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>-->\r\n  </div>\r\n</nav>\r\n\r\n\r\n<div class=\"page-header header-filter\" data-parallax=\"true\" style=\"background-image: url('assets/img/bg3.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-8 ml-auto mr-auto\">\r\n        <div class=\"brand text-center\">\r\n          <h1>{{title}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"main main-raised\">\r\n  <div class=\"container\">\r\n    <div class=\"section text-center\">\r\n      <app-users-list></app-users-list>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"footer footer-default\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</footer>\r\n\r\n\r\n"
+module.exports = "<nav class=\"navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg\" color-on-scroll=\"100\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</nav>\r\n\r\n<div class=\"page-header header-filter\" data-parallax=\"true\" style=\"background-image: url('assets/img/bg3.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-8 ml-auto mr-auto\">\r\n        <div class=\"brand text-center\">\r\n          <h1>{{title}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div id=\"main-raised\" class=\"main main-raised\">\r\n  <div class=\"container\">\r\n    <div class=\"section text-center\">\r\n      <app-users-list></app-users-list>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"footer footer-default\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</footer>\r\n"
 
 /***/ }),
 
@@ -155,16 +155,6 @@ var UserService = /** @class */ (function () {
     UserService.prototype.search = function (searchString) {
         return this.http.get(this.USERS_API + "/" + searchString);
     };
-    UserService.prototype.save = function (user) {
-        var result;
-        if (user.id) {
-            result = this.http.put(this.USERS_API + "/" + user.id, user);
-        }
-        else {
-            result = this.http.post(this.USERS_API, user);
-        }
-        return result;
-    };
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
@@ -194,7 +184,7 @@ module.exports = ":host /deep/ ng2-smart-table table {\r\n  border-style: inset;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input #search type=\"text\" class=\"form-control\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\" autofocus />\r\n  <button type=\"submit\" (click)=\"onSearch(search.value)\" class=\"btn btn-primary\">Search</button>\r\n</div>\r\n\r\n<div>\r\n  <ng2-smart-table [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\r\n</div>\r\n"
+module.exports = "<div class=\"form-group\">\r\n  <input #search type=\"text\" class=\"form-control\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\" autofocus />\r\n  <button id=\"search\" type=\"submit\" (click)=\"onSearch(search.value)\" class=\"btn btn-primary\">Search</button>\r\n</div>\r\n\r\n<div>\r\n  <ng2-smart-table [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -217,11 +207,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UsersListComponent = /** @class */ (function () {
-    //imagePreloadCount = 0;
-    //imagesToPreload = [
-    //  'image.jpg',
-    //  'anotherimage.png'
-    //];
     function UsersListComponent(userService) {
         this.userService = userService;
         this.settings = {
@@ -273,30 +258,16 @@ var UsersListComponent = /** @class */ (function () {
             }
         };
         this.source = new ng2_smart_table__WEBPACK_IMPORTED_MODULE_3__["LocalDataSource"]();
-        //this.preloadImages();
     }
-    //preloadImages() {
-    //  for (var i = 0; i < this.imagesToPreload.length; i++) {
-    //    var thisImage = new Image();
-    //    thisImage.src = this.imagesToPreload[i];
-    //    thisImage.onload = this.imageLoaded();
-    //  }
-    //}
-    //imageLoaded() {
-    //  this.imagePreloadCount += 1;
-    //  if (this.imagePreloadCount == this.imagesToPreload.length) {
-    //    this.startMyAnimation();
-    //  }
-    //}
     UsersListComponent.prototype.onSearch = function (searchString) {
         var _this = this;
-        // TODO loading
+        $('#main-raised').addClass("wait");
+        $('#search').prop("disabled", true);
         this.source.empty();
         this.userService.search(searchString).subscribe(function (data) {
             _this.source.load(data);
-            // TODO end loading
-        }, function (error) {
-            // TODO alert user there was an error in the search
+            $('#main-raised').removeClass("wait");
+            $('#search').prop("disabled", false);
         });
     };
     UsersListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

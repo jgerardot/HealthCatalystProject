@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -40,21 +36,6 @@ namespace HealthCatalystProject.Controllers
             return Ok(users);
         }
         
-        // POST: api/Users
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> PostUser(User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Users.Add(user);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = user.ID }, user);
-        }
-        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -62,11 +43,6 @@ namespace HealthCatalystProject.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        private bool UserExists(int id)
-        {
-            return db.Users.Count(e => e.ID == id) > 0;
         }
     }
 }

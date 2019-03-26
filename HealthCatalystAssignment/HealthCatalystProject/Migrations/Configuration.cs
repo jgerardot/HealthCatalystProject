@@ -1,9 +1,7 @@
 namespace HealthCatalystProject.Migrations
 {
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
     using Faker;
 
     internal sealed class Configuration : DbMigrationsConfiguration<HealthCatalystProject.Data.AppDbContext>
@@ -16,7 +14,7 @@ namespace HealthCatalystProject.Migrations
         protected override void Seed(HealthCatalystProject.Data.AppDbContext context)
         {
             //  This method will be called after migrating to the latest version.
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10000; i++) {
                 context.Users.AddOrUpdate(
                     new Models.User() {
                         ID = i + 1,

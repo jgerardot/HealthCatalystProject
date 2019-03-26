@@ -9,15 +9,9 @@ import { LocalDataSource } from 'ng2-smart-table';
 })
 export class UsersListComponent {
   source: LocalDataSource;
-  //imagePreloadCount = 0;
-  //imagesToPreload = [
-  //  'image.jpg',
-  //  'anotherimage.png'
-  //];
 
   constructor(private userService: UserService) {
     this.source = new LocalDataSource();
-    //this.preloadImages();
   }
 
   settings = {
@@ -68,31 +62,16 @@ export class UsersListComponent {
       add: false
     }
   };
-
-  //preloadImages() {
-  //  for (var i = 0; i < this.imagesToPreload.length; i++) {
-  //    var thisImage = new Image();
-  //    thisImage.src = this.imagesToPreload[i];
-  //    thisImage.onload = this.imageLoaded();
-  //  }
-  //}
-
-  //imageLoaded() {
-  //  this.imagePreloadCount += 1;
-  //  if (this.imagePreloadCount == this.imagesToPreload.length) {
-  //    this.startMyAnimation();
-  //  }
-  //}
-
+  
   onSearch(searchString: string) {
-    // TODO loading
+    $('#main-raised').addClass("wait");
+    $('#search').prop("disabled", true);
     this.source.empty();
 
     this.userService.search(searchString).subscribe(data => {
       this.source.load(data);
-      // TODO end loading
-    }, error => {
-      // TODO alert user there was an error in the search
+      $('#main-raised').removeClass("wait");
+      $('#search').prop("disabled", false);
     });
   }
 }
