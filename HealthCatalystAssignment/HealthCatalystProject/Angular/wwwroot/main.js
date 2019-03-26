@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\r\n\r\n<app-users-list></app-users-list>\r\n"
+module.exports = "<nav class=\"navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg\" color-on-scroll=\"100\">\r\n  <div class=\"container\">\r\n    <!--<div class=\"navbar-translate\">\r\n      <a class=\"navbar-brand\" href=\"https://demos.creative-tim.com/material-kit/index.html\">\r\n        Material Kit\r\n      </a>\r\n\r\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n    </div>-->\r\n\r\n    <!--<div class=\"collapse navbar-collapse\">\r\n      <ul class=\"navbar-nav ml-auto\">\r\n        <li class=\"nav-item\">\r\n          <a href=\"#\" class=\"nav-link\">\r\n            <i class=\"material-icons\">apps</i> Template\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>-->\r\n  </div>\r\n</nav>\r\n\r\n\r\n<div class=\"page-header header-filter\" data-parallax=\"true\" style=\"background-image: url('assets/img/bg3.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-8 ml-auto mr-auto\">\r\n        <div class=\"brand text-center\">\r\n          <h1>{{title}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"main main-raised\">\r\n  <div class=\"container\">\r\n    <div class=\"section text-center\">\r\n      <app-users-list></app-users-list>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"footer footer-default\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</footer>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -91,11 +91,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _users_list_users_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./users-list/users-list.component */ "./src/app/users-list/users-list.component.ts");
-/* harmony import */ var _shared_API_user_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/API/user.service */ "./src/app/shared/API/user.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _users_list_users_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./users-list/users-list.component */ "./src/app/users-list/users-list.component.ts");
+/* harmony import */ var _shared_API_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/API/user.service */ "./src/app/shared/API/user.service.ts");
+/* harmony import */ var ng2_smart_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng2-smart-table */ "./node_modules/ng2-smart-table/index.js");
 
 
 
@@ -105,42 +105,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var appRoutes = [
-    { path: '', redirectTo: '/app-root', pathMatch: 'full' },
-    {
-        path: 'app-root',
-        component: _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]
-    },
-    {
-        path: 'users-list',
-        component: _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]
-    }
-    //{
-    //  path: 'users-add',
-    //  component: SugarLevelEditComponent
-    //},
-    //{
-    //  path: 'users-edit/:id',
-    //  component: SugarLevelEditComponent
-    //}
-];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _users_list_users_list_component__WEBPACK_IMPORTED_MODULE_7__["UsersListComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _users_list_users_list_component__WEBPACK_IMPORTED_MODULE_6__["UsersListComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(appRoutes),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                ng2_smart_table__WEBPACK_IMPORTED_MODULE_8__["Ng2SmartTableModule"]
             ],
-            providers: [_shared_API_user_service__WEBPACK_IMPORTED_MODULE_8__["default"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            providers: [_shared_API_user_service__WEBPACK_IMPORTED_MODULE_7__["default"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -184,9 +165,6 @@ var UserService = /** @class */ (function () {
         }
         return result;
     };
-    UserService.prototype.remove = function (id) {
-        return this.http.delete(this.USERS_API + "/" + id.toString());
-    };
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
@@ -205,7 +183,7 @@ var UserService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VzZXJzLWxpc3QvdXNlcnMtbGlzdC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ":host /deep/ ng2-smart-table table {\r\n  border-style: inset;\r\n  border-color: initial;\r\n  -o-border-image: initial;\r\n     border-image: initial;\r\n  border-width: 2px;\r\n  display: table;\r\n  border-spacing: 2px;\r\n  border-color: grey; /* border of the big table*/\r\n}\r\n\r\n/* grid lines */\r\n\r\n:host /deep/ ng2-smart-table table > tbody > tr > td {\r\n    box-sizing: border-box;\r\n    border: 1px solid grey;\r\n}\r\n\r\n/* headers grid color*/\r\n\r\n:host /deep/ ng2-smart-table thead > tr > th  { \r\n    border: 1px solid grey;\r\n}\r\n\r\n/*font size*/\r\n\r\n:host /deep/ ng2-smart-table {\r\n  font-size: 1rem;\r\n  font-family: \"Open Sans\",\"Helvetica Neue\",Helvetica,Arial,sans-serif;\r\n  color: #606c71;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXNlcnMtbGlzdC91c2Vycy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBbUI7RUFDbkIscUJBQXFCO0VBQ3JCLHdCQUFxQjtLQUFyQixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsa0JBQWtCLEVBQUUsMkJBQTJCO0FBQ2pEOztBQUVBLGVBQWU7O0FBQ2Y7SUFDSSxzQkFBc0I7SUFDdEIsc0JBQXNCO0FBQzFCOztBQUVBLHNCQUFzQjs7QUFDdEI7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUEsWUFBWTs7QUFDWjtFQUNFLGVBQWU7RUFDZixvRUFBb0U7RUFDcEUsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL3VzZXJzLWxpc3QvdXNlcnMtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3QgL2RlZXAvIG5nMi1zbWFydC10YWJsZSB0YWJsZSB7XHJcbiAgYm9yZGVyLXN0eWxlOiBpbnNldDtcclxuICBib3JkZXItY29sb3I6IGluaXRpYWw7XHJcbiAgYm9yZGVyLWltYWdlOiBpbml0aWFsO1xyXG4gIGJvcmRlci13aWR0aDogMnB4O1xyXG4gIGRpc3BsYXk6IHRhYmxlO1xyXG4gIGJvcmRlci1zcGFjaW5nOiAycHg7XHJcbiAgYm9yZGVyLWNvbG9yOiBncmV5OyAvKiBib3JkZXIgb2YgdGhlIGJpZyB0YWJsZSovXHJcbn1cclxuXHJcbi8qIGdyaWQgbGluZXMgKi9cclxuOmhvc3QgL2RlZXAvIG5nMi1zbWFydC10YWJsZSB0YWJsZSA+IHRib2R5ID4gdHIgPiB0ZCB7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgZ3JleTtcclxufVxyXG5cclxuLyogaGVhZGVycyBncmlkIGNvbG9yKi9cclxuOmhvc3QgL2RlZXAvIG5nMi1zbWFydC10YWJsZSB0aGVhZCA+IHRyID4gdGggIHsgXHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBncmV5O1xyXG59XHJcblxyXG4vKmZvbnQgc2l6ZSovXHJcbjpob3N0IC9kZWVwLyBuZzItc21hcnQtdGFibGUge1xyXG4gIGZvbnQtc2l6ZTogMXJlbTtcclxuICBmb250LWZhbWlseTogXCJPcGVuIFNhbnNcIixcIkhlbHZldGljYSBOZXVlXCIsSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWY7XHJcbiAgY29sb3I6ICM2MDZjNzE7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -216,7 +194,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input #searchBox type=\"text\" class=\"form-control\" placeholder=\"Search\" autofocus />\r\n<button type=\"submit\" (click)=\"onSearch(searchBox.value)\">Search</button>\r\n\r\n<div *ngIf=\"users\">\r\n  <ul>\r\n    <li *ngFor=\"let user of users\">{{user.firstName}}</li>\r\n  </ul>\r\n</div>\r\n"
+module.exports = "<div class=\"form-group\">\r\n  <input #search type=\"text\" class=\"form-control\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\" autofocus />\r\n  <button type=\"submit\" (click)=\"onSearch(search.value)\" class=\"btn btn-primary\">Search</button>\r\n</div>\r\n\r\n<div>\r\n  <ng2-smart-table [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\r\n</div>\r\n\r\n<div class=\"form-group\">\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -233,19 +211,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_API_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/API/user.service */ "./src/app/shared/API/user.service.ts");
+/* harmony import */ var ng2_smart_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng2-smart-table */ "./node_modules/ng2-smart-table/index.js");
+
 
 
 
 var UsersListComponent = /** @class */ (function () {
     function UsersListComponent(userService) {
         this.userService = userService;
+        this.settings = {
+            hideSubHeader: true,
+            columns: {
+                profilePicture: {
+                    title: '',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                },
+                firstName: {
+                    title: 'First Name',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                },
+                lastName: {
+                    title: 'Last Name',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                },
+                age: {
+                    title: 'Age',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                },
+                interests: {
+                    title: 'Interests',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                },
+                address: {
+                    title: 'Address',
+                    editable: false,
+                    filter: false,
+                    sort: false
+                }
+            },
+            actions: {
+                edit: false,
+                delete: false,
+                add: false
+            }
+        };
+        this.source = new ng2_smart_table__WEBPACK_IMPORTED_MODULE_3__["LocalDataSource"]();
     }
-    UsersListComponent.prototype.ngOnInit = function () {
-    };
     UsersListComponent.prototype.onSearch = function (searchString) {
         var _this = this;
+        // TODO loading
+        this.source.empty();
         this.userService.search(searchString).subscribe(function (data) {
-            _this.users = data;
+            _this.source.load(data);
+            // TODO end loading
         });
     };
     UsersListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

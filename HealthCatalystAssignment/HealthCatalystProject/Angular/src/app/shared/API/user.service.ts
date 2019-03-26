@@ -26,8 +26,4 @@ export default class UserService {
         }
         return result;
     }
-
-    remove(id: number) {
-       return this.http.delete(`${this.USERS_API}/${id.toString()}`);
-    }
 }

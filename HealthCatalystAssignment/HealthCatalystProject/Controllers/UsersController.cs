@@ -18,23 +18,23 @@ namespace HealthCatalystProject.Controllers
     {
         private AppDbContext db = new AppDbContext();
 
-        // GET: api/Users
-        public IQueryable<User> GetUsers()
+        // GET: api/Users/5
+        [Route("api/Users/")]
+        [ResponseType(typeof(List<User>))]
+        [HttpGet]
+        public async Task<IHttpActionResult> GetUsers()
         {
-            return db.Users;
+            return Ok(new List<User>());
         }
 
         // GET: api/Users/5
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> GetUser(string searchString)
+        [Route("api/Users/{searchString}")]
+        [ResponseType(typeof(List<User>))]
+        [HttpGet]
+        public async Task<IHttpActionResult> GetUsers(string searchString)
         {
-            User user = await db.Users.FindAsync(searchString);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(user);
+            List<User> users = await db.Users.Where(u => u.FirstName.Contains(searchString) || u.LastName.Contains(searchString)).ToListAsync();
+            return Ok(users);
         }
 
         // PUT: api/Users/5
@@ -86,23 +86,7 @@ namespace HealthCatalystProject.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = user.ID }, user);
         }
-
-        // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> DeleteUser(int id)
-        {
-            User user = await db.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            db.Users.Remove(user);
-            await db.SaveChangesAsync();
-
-            return Ok(user);
-        }
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)

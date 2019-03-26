@@ -1,8 +1,12 @@
-<input #searchBox type="text" class="form-control" placeholder="Search" autofocus />
-<button type="submit" (click)="onSearch(searchBox.value)">Search</button>
+<div class="form-group">
+  <input #search type="text" class="form-control" placeholder="Search..." (keydown.enter)="onSearch(search.value)" autofocus />
+  <button type="submit" (click)="onSearch(search.value)" class="btn btn-primary">Search</button>
+</div>
 
-<div *ngIf="users">
-  <ul>
-    <li *ngFor="let user of users">{{user.firstName}}</li>
-  </ul>
+<div>
+  <ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+</div>
+
+<div class="form-group">
+
 </div>
