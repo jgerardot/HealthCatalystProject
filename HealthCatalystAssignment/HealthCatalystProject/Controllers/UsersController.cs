@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -24,6 +25,7 @@ namespace HealthCatalystProject.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetUsers()
         {
+            await Task.Delay(new Random().Next(1000, 10000));
             return Ok(new List<User>());
         }
 
@@ -34,44 +36,10 @@ namespace HealthCatalystProject.Controllers
         public async Task<IHttpActionResult> GetUsers(string searchString)
         {
             List<User> users = await db.Users.Where(u => u.FirstName.Contains(searchString) || u.LastName.Contains(searchString)).ToListAsync();
+            await Task.Delay(new Random().Next(1000, 10000));
             return Ok(users);
         }
-
-        // PUT: api/Users/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUser(int id, User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != user.ID)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(user).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
+        
         // POST: api/Users
         [ResponseType(typeof(User))]
         public async Task<IHttpActionResult> PostUser(User user)

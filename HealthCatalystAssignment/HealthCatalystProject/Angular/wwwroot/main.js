@@ -194,7 +194,7 @@ module.exports = ":host /deep/ ng2-smart-table table {\r\n  border-style: inset;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input #search type=\"text\" class=\"form-control\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\" autofocus />\r\n  <button type=\"submit\" (click)=\"onSearch(search.value)\" class=\"btn btn-primary\">Search</button>\r\n</div>\r\n\r\n<div>\r\n  <ng2-smart-table [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\r\n</div>\r\n\r\n<div class=\"form-group\">\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"form-group\">\r\n  <input #search type=\"text\" class=\"form-control\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\" autofocus />\r\n  <button type=\"submit\" (click)=\"onSearch(search.value)\" class=\"btn btn-primary\">Search</button>\r\n</div>\r\n\r\n<div>\r\n  <ng2-smart-table [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -217,6 +217,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UsersListComponent = /** @class */ (function () {
+    //imagePreloadCount = 0;
+    //imagesToPreload = [
+    //  'image.jpg',
+    //  'anotherimage.png'
+    //];
     function UsersListComponent(userService) {
         this.userService = userService;
         this.settings = {
@@ -226,7 +231,9 @@ var UsersListComponent = /** @class */ (function () {
                     title: '',
                     editable: false,
                     filter: false,
-                    sort: false
+                    sort: false,
+                    type: "html",
+                    valuePrepareFunction: function (value) { return "<img width=\"50\" src=\"" + value + "\" />"; }
                 },
                 firstName: {
                     title: 'First Name',
@@ -266,7 +273,21 @@ var UsersListComponent = /** @class */ (function () {
             }
         };
         this.source = new ng2_smart_table__WEBPACK_IMPORTED_MODULE_3__["LocalDataSource"]();
+        //this.preloadImages();
     }
+    //preloadImages() {
+    //  for (var i = 0; i < this.imagesToPreload.length; i++) {
+    //    var thisImage = new Image();
+    //    thisImage.src = this.imagesToPreload[i];
+    //    thisImage.onload = this.imageLoaded();
+    //  }
+    //}
+    //imageLoaded() {
+    //  this.imagePreloadCount += 1;
+    //  if (this.imagePreloadCount == this.imagesToPreload.length) {
+    //    this.startMyAnimation();
+    //  }
+    //}
     UsersListComponent.prototype.onSearch = function (searchString) {
         var _this = this;
         // TODO loading
@@ -274,6 +295,8 @@ var UsersListComponent = /** @class */ (function () {
         this.userService.search(searchString).subscribe(function (data) {
             _this.source.load(data);
             // TODO end loading
+        }, function (error) {
+            // TODO alert user there was an error in the search
         });
     };
     UsersListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

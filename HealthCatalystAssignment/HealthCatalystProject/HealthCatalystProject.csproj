@@ -53,6 +53,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.5\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
     </Reference>
@@ -222,6 +225,49 @@
     <Content Include="Angular\src\app\search-box\search-box.component.html" />
     <Content Include="Angular\src\app\users-list\users-list.component.css" />
     <Content Include="Angular\src\app\users-list\users-list.component.html" />
+    <Content Include="Angular\src\assets\css\material-kit.css" />
+    <Content Include="Angular\src\assets\css\material-kit.min.css" />
+    <Content Include="Angular\src\assets\img\apple-icon.png" />
+    <Content Include="Angular\src\assets\img\bg.jpg" />
+    <Content Include="Angular\src\assets\img\bg2.jpg" />
+    <Content Include="Angular\src\assets\img\bg3.jpg" />
+    <Content Include="Angular\src\assets\img\bg7.jpg" />
+    <Content Include="Angular\src\assets\img\city-profile.jpg" />
+    <Content Include="Angular\src\assets\img\city.jpg" />
+    <Content Include="Angular\src\assets\img\examples\clem-onojegaw.jpg" />
+    <Content Include="Angular\src\assets\img\examples\clem-onojeghuo.jpg" />
+    <Content Include="Angular\src\assets\img\examples\cynthia-del-rio.jpg" />
+    <Content Include="Angular\src\assets\img\examples\mariya-georgieva.jpg" />
+    <Content Include="Angular\src\assets\img\examples\olu-eletu.jpg" />
+    <Content Include="Angular\src\assets\img\examples\studio-1.jpg" />
+    <Content Include="Angular\src\assets\img\examples\studio-2.jpg" />
+    <Content Include="Angular\src\assets\img\examples\studio-3.jpg" />
+    <Content Include="Angular\src\assets\img\examples\studio-4.jpg" />
+    <Content Include="Angular\src\assets\img\examples\studio-5.jpg" />
+    <Content Include="Angular\src\assets\img\faces\avatar.jpg" />
+    <Content Include="Angular\src\assets\img\faces\camp.jpg" />
+    <Content Include="Angular\src\assets\img\faces\card-profile1-square.jpg" />
+    <Content Include="Angular\src\assets\img\faces\card-profile2-square.jpg" />
+    <Content Include="Angular\src\assets\img\faces\card-profile4-square.jpg" />
+    <Content Include="Angular\src\assets\img\faces\card-profile5-square.jpg" />
+    <Content Include="Angular\src\assets\img\faces\card-profile6-square.jpg" />
+    <Content Include="Angular\src\assets\img\faces\christian.jpg" />
+    <Content Include="Angular\src\assets\img\faces\kendall.jpg" />
+    <Content Include="Angular\src\assets\img\faces\marc.jpg" />
+    <Content Include="Angular\src\assets\img\favicon.png" />
+    <Content Include="Angular\src\assets\img\landing.jpg" />
+    <Content Include="Angular\src\assets\img\profile.jpg" />
+    <Content Include="Angular\src\assets\img\profile_city.jpg" />
+    <Content Include="Angular\src\assets\img\responsive-nav.gif" />
+    <Content Include="Angular\src\assets\js\core\bootstrap-material-design.min.js" />
+    <Content Include="Angular\src\assets\js\core\jquery.min.js" />
+    <Content Include="Angular\src\assets\js\core\popper.min.js" />
+    <Content Include="Angular\src\assets\js\material-kit.js" />
+    <Content Include="Angular\src\assets\js\material-kit.min.js" />
+    <Content Include="Angular\src\assets\js\plugins\bootstrap-datetimepicker.js" />
+    <Content Include="Angular\src\assets\js\plugins\jquery.sharrre.js" />
+    <Content Include="Angular\src\assets\js\plugins\moment.min.js" />
+    <Content Include="Angular\src\assets\js\plugins\nouislider.min.js" />
     <Content Include="Angular\src\favicon.ico" />
     <Content Include="Angular\src\index.html" />
     <Content Include="Angular\src\karma.conf.js" />
@@ -500,6 +546,8 @@
     <Content Include="Angular\src\material-kit-master\LICENSE.md" />
     <Content Include="Angular\src\material-kit-master\package.json" />
     <Content Include="Angular\src\material-kit-master\README.md" />
+    <Content Include="Angular\src\assets\css\material-kit.css.map" />
+    <Content Include="Angular\src\assets\js\material-kit.js.map" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
